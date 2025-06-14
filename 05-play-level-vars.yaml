@@ -1,0 +1,13 @@
+- name: variables
+  hosts: local                                                        # local host
+  connection: local
+  vars:                                               #These are play-level variables, can be applicable to whole play
+    Name: "kancharla ajay"
+    Age: 25
+    Gender: Male
+    Color: Fair
+  tasks:
+  - name: Print the variables
+    ansible.builtin.debug:
+     msg: "Name is {{ Name }}, Age is {{ Age }}, Gender is {{ Gender }}, Color is {{ Color }}"
+
