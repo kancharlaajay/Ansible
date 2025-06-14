@@ -4,7 +4,7 @@
   tasks:
   - name: Play1 and Task1
     ansible.builtin.debug:
-      mgs: "print Play1 and Task1"
+      msg: "print Play1 and Task1"
 
 
 - name: PLAY2
