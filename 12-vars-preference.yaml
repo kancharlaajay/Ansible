@@ -1,0 +1,26 @@
+- name: Variables
+  hosts: local
+  connection: local
+  vars:
+    Name: "Ajay Kancharla"
+  vars_files:
+  - course.yaml
+  vars_prompt:
+  - name: Name
+    prompt: Enter the name
+    private: false
+  tasks:
+  - name: Print the variables
+    vars:
+      Name: "Vamsi Bondada"
+    ansible.builtin.debug:
+      msg: Enter the name {{ Name }}
+
+    #Preference
+    # 1.Command line Or args
+    # 2. Task-level
+    # 3. file-level
+    # 4. prompt
+    # 5. play-level
+    # 6. inventory
+    # 7. Roles

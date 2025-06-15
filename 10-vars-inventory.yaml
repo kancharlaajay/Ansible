@@ -1,0 +1,7 @@
+- name: variables from inventory.ini
+  hosts: Node                                   #Ansible-Node              #defined variables in inventory.ini file, lines 45,46
+  tasks:
+  - name: Print the variables
+    ansible.builtin.debug:
+     msg: "Name is {{ Name }}, Age is {{ Age }}, Gender is {{ Gender }}, Color is {{ Color }}"
+

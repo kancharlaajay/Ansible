@@ -1,0 +1,9 @@
+- name: Variables passing through command lines
+  hosts: Node
+  tasks:
+  - name: print the details
+    ansible.builtin.debug:
+      msg: "Name is {{ NAME }}, Age is {{ AGE }}, Gender is {{ GENDER }}"
+
+
+#command: ansible-playbook -i inventory.ini 11-vars-args.yaml -e "NAME='Kancharla ajay'" -e "AGE=25" -e "GENDER=Male"

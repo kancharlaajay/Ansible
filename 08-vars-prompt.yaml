@@ -1,0 +1,21 @@
+- name: variables using prompt
+  hosts: local    
+  connection: local
+  vars_prompt:                                        # It will read the values promptly, this will be used for security
+  - name: Name
+    prompt: Enter the name
+    private: false                                    # Private: false, if it is confidential
+  
+  - name: Age
+    prompt: Enter the age
+    private: true
+
+  - name: Gender
+    prompt: Enter the Gender
+    private: true
+
+  tasks:
+  - name: Print the details
+    ansible.builtin.debug:
+      msg: "Name is {{ Name }}, Age is {{ Age }}, Gender is {{ Gender }}"
+

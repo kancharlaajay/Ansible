@@ -8,7 +8,7 @@
     Color: Fair
   tasks:
   - name: Print the variables
-    vars:                              # Task level variables, accessible only within the task. Task level variable can override play-lvel variables
+    vars:                              #Task level variables, accessible only within the task. Task level variable can override play-lvel variables
       Name: "Bondada Vamsi"             
     ansible.builtin.debug:
      msg: "Name is {{ Name }}, Age is {{ Age }}, Gender is {{ Gender }}, Color is {{ Color }}"

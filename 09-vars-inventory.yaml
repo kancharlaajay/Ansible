@@ -1,0 +1,10 @@
+- name: variables from inventory ini
+  hosts: local                                                        # local host
+  connection: local
+  tasks:
+  - name: Print the variables
+    ansible.builtin.debug:
+     msg: "Name is {{ Name }}, Age is {{ Age }}, Gender is {{ Gender }}, Color is {{ Color }}"
+
+
+   # variables defined in inventory.ini
