@@ -1,0 +1,11 @@
+- name: Install the packages 
+  hosts: Node1
+  tasks:
+  - name: Install packages
+    ansible.builtin.packages:
+      msg: "{{ item }}"
+    loop:
+    - nginx
+    - gcc
+    - mysql
+    - zip
