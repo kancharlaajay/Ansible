@@ -1,0 +1,14 @@
+- name: Install the nginx
+  hosts: Node1
+  tasks:
+  - name: Install nginx if RHEL
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == "Redhat"
+
+  - name: Install nginx if UBUNTU
+    ansible.builtin.package:
+      name: nginx
+      state: present
+    when: ansible_os_family == "Debain"
