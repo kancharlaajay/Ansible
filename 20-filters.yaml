@@ -2,6 +2,11 @@
   hosts: local
   connection: local
   tasks:
+  - name: install package
+    ansible.builtin.package:
+      name: "netaddr"
+      state: present
+      
   - name: handle undefine variable
     ansible.builtin.debug:
       msg: "Hello {{ person | default('Ramesh') }}"
