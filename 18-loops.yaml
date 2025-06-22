@@ -2,7 +2,7 @@
   hosts: Node1
   tasks:
   - name: Install packages
-    ansible.builtin.packages:
+    ansible.builtin.package:
       name: "{{ item }}"
       state: present
     loop:
