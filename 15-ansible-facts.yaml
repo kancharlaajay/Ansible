@@ -1,0 +1,8 @@
+- name: Print the ansible facts
+  hosts: Node
+  tasks:
+  - name: print the facts
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts }}"
+
+#This playbook will print the ansible facts which contain the complete information about the Node (Ansible node servers)
