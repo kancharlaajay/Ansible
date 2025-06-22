@@ -4,6 +4,7 @@
   - name: Install packages
     ansible.builtin.packages:
       msg: "{{ item }}"
+      state: Installed
     loop:
     - nginx
     - gcc
