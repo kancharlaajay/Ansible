@@ -5,7 +5,7 @@
     ansible.builtin.dnf:
       name: nginx
       state: present
-    when: ansible_os_family == "Redhat"
+    when: ansible_os_family == "Redhat"        # Here, ansible will check the os_family details from ansible facts then it will run the task accordingly.
 
   - name: Install nginx if UBUNTU
     ansible.builtin.package:
