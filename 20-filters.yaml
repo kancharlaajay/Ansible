@@ -4,9 +4,9 @@
   tasks:
   - name: install package
     ansible.builtin.package:
-      name: "netaddr"
+      name: netaddr
       state: present
-      
+
   - name: handle undefine variable
     ansible.builtin.debug:
       msg: "Hello {{ person | default('Ramesh') }}"
